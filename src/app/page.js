@@ -16,14 +16,15 @@ export default async function Home() {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-md-12">
-          <h1 className="text-center fw-bold">Aprender a Consumir una API con Next.js</h1>
+        <div className="col-md-12 mt-5">
+          <h1 className="text-center fw-bold">
+            Aprender a Consumir una API con Next.js <hr />
+          </h1>
         </div>
       </div>
 
       <div className="row justify-content-center">
         <div className="col-md-12">
-          <h1>Lista de Post</h1>
           <ul>
             {data.map((post) => (
               <Post key={post.id} post={post} />
