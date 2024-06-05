@@ -26,11 +26,15 @@
 
     Hemos instalado Bootstrap 5 para mejorar el diseño de la aplicación, pero si tienes dudas aquí te dejo un video de como configurar bootstrap 5 desde cero y paso a paso con Next.js
 
-[Video](https://www.youtube.com/watch?v=yzNCrBOqvto)
+📹[Ver Video](https://www.youtube.com/watch?v=yzNCrBOqvto)
 
 #### Resultado final
 
 ![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/consumir-api-con-nextjs.png)
+
+##### Documentación oficial
+
+    https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
 
 ### Expresiones de Gratitud 🎁
 
