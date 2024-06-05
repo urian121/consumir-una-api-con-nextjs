@@ -1,17 +1,33 @@
-// import Image from "next/image";
+import axios from "axios";
 import Post from "./components/Post";
 
+// Función asincrona que obtiene los datos de la API
 async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   if (!res.ok) {
-    throw new Error("Error al obtener los datos");
+    console.log("Error al obtener los datos");
   }
-
+  // retornando los datos obtenidos de la API en formato JSON
   return res.json();
 }
 
+// función asincrona que obtiene los datos de la API usando axios
+async function getDataAxios() {
+  let url_api = "https://jsonplaceholder.typicode.com/posts";
+  const res = await axios.get(url_api);
+  if (!res.ok) {
+    console.log("Error al obtener los datos");
+  }
+  // retornando los datos obtenidos de la API en formato JSON
+  return res.data;
+}
+
 export default async function Home() {
-  const data = await getData();
+  // Llamando a la función asincrona que obtiene los datos de la API
+  const dataPosts = await getData();
+
+  // const dataPostsAxios = await getDataAxios();
+  // console.log(dataPostsAxios);
 
   return (
     <div className="container">
@@ -26,7 +42,7 @@ export default async function Home() {
       <div className="row justify-content-center">
         <div className="col-md-12">
           <ul>
-            {data.map((post) => (
+            {dataPosts.map((post) => (
               <Post key={post.id} post={post} />
             ))}
           </ul>
